@@ -59,7 +59,7 @@ X = ga( optifun, 7, ...
 
 S = ship( X );
 
-%% DISPLAY RESULTS
+% DISPLAY RESULTS
 
 S %#ok<NOPTS>
 

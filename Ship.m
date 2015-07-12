@@ -151,7 +151,7 @@ classdef Ship
 		function [ hitRate1, hitRate2 ] = getHitRate( precision1, dodge1, precision2, dodge2 )
 			
 			function h = hit( p, d )
-				h = max( 0.25, 1 - max( 0, ( d - p ) ./ d ) );
+                h = 1 - max( 0, min( 0.75, 0.1 + 0.5 * ( d - p ) ./ ( 25 + min( d, p ) ) ) );
 			end
 			
 			hitRate1 = hit( precision1, dodge2 );
